@@ -52,7 +52,7 @@ def save_to_database(df):
         existing = session.execute(f"SELECT * FROM products WHERE id = {row['id']}").fetchone()
         if existing:
             # ویرایش سطر
-            queryUpdate = 'UPDATE "final"."digikala"."products" SET "model2" = :model WHERE "id" = :id'
+            queryUpdate = 'UPDATE "final"."digikala"."products" SET "model" = :model WHERE "id" = :id'
             session.execute(queryUpdate)
         else:
             # اضافه کردن سطر جدید
